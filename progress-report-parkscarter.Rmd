@@ -8,3 +8,33 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+Hello
+
+```{r}
+library(rvest)
+library(dplyr)  
+
+# Extract the table from the webpage
+
+url <- "https://www.baseball-reference.com/awards/hof_2023.shtml"
+
+webpage <- read_html(url)
+
+table <- html_table(webpage)[[1]] 
+
+colnames(table) <- as.character(unlist(table[1,]))
+
+table <- table[-1,]
+
+# View the extracted table
+head(table)
+empty_strings_before <- sum(table == "", na.rm = TRUE)
+
+table[table == ""] <- NA
+
+empty_strings <- sum(table == "", na.rm = TRUE)
+print(empty_strings_before)
+print(empty_strings)
+```
+

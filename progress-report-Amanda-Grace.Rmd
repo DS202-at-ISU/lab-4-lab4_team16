@@ -109,3 +109,12 @@ colnames(baseball)[39] <- "Pos Summary"
 baseball
 ```
 
+
+```{r}
+baseball <- baseball[baseball$Rank != 'Rk',]
+```
+
+```{r}
+baseball
+```
+

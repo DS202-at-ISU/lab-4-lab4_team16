@@ -10,3 +10,54 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
+```{r}
+library(rvest)
+```
+
+```{r}
+url <- "https://en.wikipedia.org/wiki/2023_Baseball_Hall_of_Fame_balloting"
+html <- read_html(url)
+html
+```
+
+```{r}
+tables <- html %>% html_table(fill=TRUE)
+tables %>% str()
+```
+
+```{r}
+bbwaa <- tables[[3]]  # candidates on the BBWAA Ballot
+vet1 <- tables[[5]] # Early Baseball Era Committee
+vet2 <- tables[[6]] # Golden Days Era Committee
+bbwaa %>% head()
+```
+
+
+
+
+
+
+
+
+
+
+
+```{r}
+website <- "https://www.baseball-reference.com/awards/hof_2023.shtml"
+code <- read_html(website)
+code
+```
+
+```{r}
+table <- code %>% html_table(fill=TRUE)
+table %>% str()
+```
+
+```{r}
+baseball <- table [[1]]
+```
+
+```{r}
+head(baseball)
+```
+

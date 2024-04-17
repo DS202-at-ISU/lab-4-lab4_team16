@@ -58,6 +58,54 @@ baseball <- table [[1]]
 ```
 
 ```{r}
-head(baseball)
+baseball
+```
+
+```{r}
+colnames(baseball)[1] <- "Rank"
+colnames(baseball)[2] <- "Name"
+colnames(baseball)[3] <- "Year on Ballot"
+colnames(baseball)[4] <- "Votes"
+colnames(baseball)[5] <- "%Votes"
+colnames(baseball)[6] <- "HOFm"
+colnames(baseball)[7] <- "HOFs"
+colnames(baseball)[8] <- "Yrs"
+colnames(baseball)[9] <- "WAR"
+colnames(baseball)[10] <- "WAR7"
+colnames(baseball)[11] <- "JAWS"
+colnames(baseball)[12] <- "Jpos"
+colnames(baseball)[13] <- "Batting G"
+colnames(baseball)[14] <- "Batting AB"
+colnames(baseball)[15] <- "Batting R"
+colnames(baseball)[16] <- "Batting H"
+colnames(baseball)[17] <- "Batting HR"
+colnames(baseball)[18] <- "Batting RBI"
+colnames(baseball)[19] <- "Batting SB"
+colnames(baseball)[20] <- "Batting BB"
+colnames(baseball)[21] <- "Batting BA"
+colnames(baseball)[22] <- "Batting OBP"
+colnames(baseball)[23] <- "Batting SLG"
+colnames(baseball)[24] <- "Batting OPS"
+colnames(baseball)[25] <- "Batting OPS+"
+colnames(baseball)[26] <- "Pitching W"
+colnames(baseball)[27] <- "Pitching L"
+colnames(baseball)[28] <- "Pitching ERA"
+colnames(baseball)[29] <- "Pitching ERA+"
+colnames(baseball)[30] <- "Pitching WHIP"
+colnames(baseball)[31] <- "Pitching G"
+colnames(baseball)[32] <- "Pitching GS"
+colnames(baseball)[33] <- "Pitching SV"
+colnames(baseball)[34] <- "Pitching IP"
+colnames(baseball)[35] <- "Pitching H"
+colnames(baseball)[36] <- "Pitching HR"
+colnames(baseball)[37] <- "Pitchin BB"
+colnames(baseball)[38] <- "Pitching SO"
+colnames(baseball)[39] <- "Pos Summary"
+
+
+```
+
+```{r}
+baseball
 ```
 

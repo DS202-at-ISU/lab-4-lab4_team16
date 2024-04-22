@@ -7,6 +7,7 @@ output: github_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
+library(rvest)
 ```
 
 # Lab report #4 - instructions
@@ -16,7 +17,6 @@ Follow the instructions posted at <https://ds202-at-isu.github.io/labs.html> for
 All submissions to the github repo will be automatically uploaded for grading once the due date is passed. Submit a link to your repository on Canvas (only one submission per team) to signal to the instructors that you are done with your submission.
 
 # Lab 4: Scraping (into) the Hall of Fame
-
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 hof <- Lahman::HallOfFame

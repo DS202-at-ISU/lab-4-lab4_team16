@@ -1,0 +1,23 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit the README.Rmd file -->
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(rvest)
+```
+
+```{r}
+
+url <- "https://www.baseball-reference.com/awards/hof_2023.shtml"
+pg <- read_html(url)
+tb <- html_table(pg, fill = TRUE)
+HallOfFame23 <- tb[[1]]
+
+colnames(HallOfFame23)<-HallOfFame23[1,]
+HallOfFame23<-HallOfFame23[-1,]
+HallOfFame23
+```
